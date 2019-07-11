@@ -9,7 +9,7 @@ bin
 target
 build/
 .gradle
-
+complete/src/main/generated/
 # Eclipse Project Files #
 
 .classpath
@@ -29,3 +29,5 @@ build/
 
 dependency-reduced-pom.xml
 README.html
+
+src/main/generated

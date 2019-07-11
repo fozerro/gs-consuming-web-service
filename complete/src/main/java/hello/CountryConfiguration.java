@@ -14,13 +14,15 @@ public class CountryConfiguration {
 		// this package must match the package in the <generatePackage> specified in
 		// pom.xml
 		marshaller.setContextPath("hello.wsdl");
+//		marshaller.setPackagesToScan("hello.wsdl");
 		return marshaller;
 	}
 
 	@Bean
 	public CountryClient countryClient(Jaxb2Marshaller marshaller) {
 		CountryClient client = new CountryClient();
-		client.setDefaultUri("http://localhost:8080/ws");
+		client.setDefaultUri("http://localhost:8088/mockCountriesPortSoap11");
+//		client.setDefaultUri("http://localhost:8080/ws");
 		client.setMarshaller(marshaller);
 		client.setUnmarshaller(marshaller);
 		return client;

@@ -23,8 +23,10 @@ public class Application {
 			if (args.length > 0) {
 				country = args[0];
 			}
-			GetCountryResponse response = quoteClient.getCountry(country);
+			GetCountryResponse response = quoteClient.getCountry2(country);
+//			GetCountryResponse response2 = quoteClient.getCountryMarszal(country);
 			System.err.println(response.getCountry().getCurrency());
+//			System.out.println(response2.getCountry());
 		};
 	}
 
